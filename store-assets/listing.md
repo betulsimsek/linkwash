@@ -57,6 +57,7 @@ Linkwash bağımsız bir projedir, ClearURLs projesiyle bağlantısı yoktur. Ku
 
 ## Privacy practices tab
 - **Single purpose:** Remove tracking parameters from URLs and unwrap redirect links.
+- **Privacy policy URL:** https://betulsimsek.github.io/linkwash/privacy.html
 - **Permission justifications:** see privacy-policy.md table.
 - **Data usage:** Does not collect or use any user data (tick "No" for all categories).
 - **Remote code:** No.
