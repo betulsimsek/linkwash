@@ -30,7 +30,8 @@ const base = `http://localhost:${port}`;
 
 const browser = await puppeteer.launch({
   headless: true,
-  args: [`--disable-extensions-except=${EXT}`, `--load-extension=${EXT}`, "--no-first-run"]
+  // GitHub's Ubuntu runners block Chrome's sandbox (unprivileged user namespaces).
+  args: [`--disable-extensions-except=${EXT}`, `--load-extension=${EXT}`, "--no-first-run", ...(process.env.CI ? ["--no-sandbox"] : [])]
 });
 
 const results = [];
