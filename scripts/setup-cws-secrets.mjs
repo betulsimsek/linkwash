@@ -14,24 +14,52 @@ const repos = process.argv.slice(2).length
   ? process.argv.slice(2)
   : ["betulsimsek/linkwash", "betulsimsek/sp-poker-extension"];
 
-function ask(question, hidden) {
+function ask(question) {
   return new Promise(resolve => {
-    const rl = createInterface({ input: process.stdin, output: process.stdout, terminal: true });
-    if (hidden) {
-      rl._writeToOutput = s => {
-        if (s.includes(question)) rl.output.write(s);
-      };
-    }
+    const rl = createInterface({ input: process.stdin, output: process.stdout });
     rl.question(question, answer => {
       rl.close();
-      if (hidden) process.stdout.write("\n");
       resolve(answer.trim());
     });
   });
 }
 
+// Reads a line in raw mode without echoing it; shows only a character count.
+function askHidden(question) {
+  return new Promise(resolve => {
+    const { stdin, stdout } = process;
+    if (!stdin.isTTY) return resolve(ask(question));
+    let value = "";
+    stdout.write(question);
+    stdin.setRawMode(true);
+    stdin.resume();
+    stdin.setEncoding("utf8");
+    const onData = chunk => {
+      for (const ch of chunk) {
+        if (ch === "\r" || ch === "\n") {
+          stdin.setRawMode(false);
+          stdin.pause();
+          stdin.off("data", onData);
+          stdout.write("\n");
+          resolve(value.trim());
+          return;
+        }
+        if (ch === "\u0003") process.exit(130);
+        if (ch === "\u007f" || ch === "\b") value = value.slice(0, -1);
+        else if (ch >= " ") value += ch;
+      }
+      stdout.write(`\r${question}[${value.length} characters]\u001b[K`);
+    };
+    stdin.on("data", onData);
+  });
+}
+
 const clientId = await ask("OAuth client ID: ");
-const clientSecret = await ask("OAuth client secret (hidden): ", true);
+const clientSecret = await askHidden("OAuth client secret (hidden): ");
+if (!/^GOCSPX-[\w-]{28}$/.test(clientSecret)) {
+  const go = await ask(`Got ${clientSecret.length} characters; Google client secrets are usually "GOCSPX-" + 28 (35 in total). Was it pasted twice? Continue anyway? [y/N] `);
+  if (go.toLowerCase() !== "y") process.exit(1);
+}
 if (!clientId || !clientSecret) {
   console.error("Client ID and secret are required.");
   process.exit(1);
