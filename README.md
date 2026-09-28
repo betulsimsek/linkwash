@@ -1,8 +1,16 @@
+<p align="center"><img src="icons/icon128.png" width="96" alt="Linkwash icon"></p>
+
 # Linkwash
 
 A Manifest V3 successor to ClearURLs for Chrome. Linkwash strips tracking parameters (`utm_*`, `fbclid`, `gclid` and 700+ more) and unwraps redirect links (Google, Facebook and dozens of others). It uses the rule catalog maintained by the [ClearURLs](https://github.com/ClearURLs/Rules) community, plus its own [extra rules](rules/EXTRA.md) for ad-click IDs the catalog misses (Search Ads 360 `ds_*`, `gbraid`/`wbraid`, TikTok, LinkedIn, Pinterest, Reddit and others).
 
 ClearURLs was removed from the Chrome Web Store with the other Manifest V2 extensions, which left about 37,000 Chrome users without it. Linkwash reimplements the extension for Manifest V3 and keeps using the same community rule catalog.
+
+## Screenshots
+
+| English | Türkçe |
+|---|---|
+| ![Linkwash popup in English](store-assets/screenshot-en.png) | ![Linkwash popup'ı Türkçe](store-assets/screenshot-tr.png) |
 
 ## How it works
 
