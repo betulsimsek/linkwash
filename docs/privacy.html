@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linkwash Privacy Policy</title>
+  <link rel="icon" href="icon128.png">
+  <style>
+    :root { --bg:#faf9f5; --text:#2c2c2a; --muted:#6b6a64; --border:#e3e1d8; --accent:#0f6e56; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#262624; --text:#f1efe8; --muted:#b4b2a9; --border:#46453f; --accent:#5dcaa5; } }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+    main { max-width:720px; margin:0 auto; padding:40px 16px 64px; }
+    header { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+    header img { width:44px; height:44px; border-radius:10px; }
+    h1 { font-size:28px; margin:0; }
+    h2 { font-size:19px; margin-top:32px; }
+    .muted { color:var(--muted); }
+    a { color:var(--accent); }
+    table { width:100%; border-collapse:collapse; margin-top:8px; font-size:15px; }
+    th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--border); }
+    code { font-size:14px; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon128.png" alt="">
+    <h1>Linkwash Privacy Policy</h1>
+  </header>
+  <p class="muted">Last updated: 28 September 2026</p>
+
+  <p><strong>Linkwash does not collect, store, transmit or sell any personal data.</strong></p>
+  <ul>
+    <li><strong>No network requests:</strong> The extension never contacts any server, including its developer's servers.</li>
+    <li><strong>Local processing:</strong> URLs are processed only inside your browser, only to remove tracking parameters and unwrap redirect links.</li>
+    <li><strong>Local settings:</strong> The only data Linkwash stores is your settings: the on/off switch and the list of sites where you paused it. These stay in your browser's local extension storage and never leave your device.</li>
+    <li><strong>No tracking:</strong> There is no analytics, telemetry, advertising, account or third-party code.</li>
+  </ul>
+
+  <h2>Why Linkwash needs its permissions</h2>
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td>Access to all websites and <code>declarativeNetRequestWithHostAccess</code></td><td>To remove tracking parameters from navigations on any site before the request is sent.</td></tr>
+    <tr><td><code>webNavigation</code></td><td>To unwrap redirect links (for example <code>google.com/url?q=…</code>) on top-level navigations.</td></tr>
+    <tr><td><code>storage</code></td><td>To remember your on/off setting and the sites where you paused Linkwash.</td></tr>
+    <tr><td><code>contextMenus</code>, <code>clipboardWrite</code></td><td>For the "Copy clean link" item in the right-click menu.</td></tr>
+  </table>
+
+  <h2>Source code</h2>
+  <p>Linkwash is open source: <a href="https://github.com/betulsimsek/linkwash">github.com/betulsimsek/linkwash</a>.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:eylulbetulsimsek@gmail.com">eylulbetulsimsek@gmail.com</a></p>
+</main>
+</body>
+</html>
