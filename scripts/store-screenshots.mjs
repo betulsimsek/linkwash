@@ -18,7 +18,7 @@ const COPY = {
     lines: ["Removes utm_*, fbclid, gclid and 700+ other trackers", "Unwraps Google, Facebook and other redirect links", "Clean “Copy link address” on right click", "No network requests. No analytics. Open source."]
   },
   tr: {
-    title: "Takip parametreleri, yıkandı gitti.",
+    title: "Takip parametreleri temizlendi.",
     lines: ["utm_*, fbclid, gclid ve 700+ takipçiyi siler", "Google, Facebook ve diğer yönlendirme linklerini çözer", "Sağ tık “Bağlantı adresini kopyala” da temiz", "Ağ isteği yok. Analitik yok. Açık kaynak."]
   }
 };
