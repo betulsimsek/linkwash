@@ -3,9 +3,13 @@ name: Publish to Chrome Web Store
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - "**.md"
-      - "store-assets/**"
+    # Only files that end up in the extension package trigger a release.
+    paths:
+      - "manifest.json"
+      - "src/**"
+      - "rules/**"
+      - "icons/icon*.png"
+      - "_locales/**"
   workflow_call:
     inputs:
       ref:
