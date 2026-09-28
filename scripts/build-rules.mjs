@@ -13,7 +13,8 @@ import { dirname, join } from "node:path";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOG = join(ROOT, "rules", "clearurls-data.min.json");
-const CATALOG_URL = "https://rules2.clearurls.xyz/data.minify.json";
+const EXTRA = join(ROOT, "rules", "linkwash-extra.json");
+const CATALOG_URL ="https://rules2.clearurls.xyz/data.minify.json";
 
 // Keep network-level rewriting to navigations; sub-resources are left to the
 // page so functional query strings on XHR/fetch calls are never touched.
@@ -169,6 +170,12 @@ async function main() {
   }
   const raw = readFileSync(CATALOG, "utf8");
   const catalog = JSON.parse(raw);
+  // Linkwash's own additions (rules/EXTRA.md) go after the catalog providers.
+  const extra = JSON.parse(readFileSync(EXTRA, "utf8"));
+  for (const name of Object.keys(extra.providers)) {
+    if (catalog.providers[name]) throw new Error(`extra provider ${name} clashes with the catalog`);
+  }
+  catalog.providers = { ...catalog.providers, ...extra.providers };
   const { providers, dnr, stats } = buildFromCatalog(catalog);
 
   // Every regex must compile in JS; RE2 support is verified in Chrome by the e2e test.

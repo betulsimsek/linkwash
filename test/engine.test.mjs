@@ -96,3 +96,11 @@ test("dnrResult mirrors the literal removals the static ruleset performs", () =>
   // Regex-only parameters are left for the engine.
   assert.equal(dnrResult("https://example.com/a?utm_weird_custom=1", providers), "https://example.com/a?utm_weird_custom=1");
 });
+
+test("Linkwash extra rules remove ad-click IDs the catalog misses", () => {
+  assert.equal(clean("https://www.flypgs.com/?ds_rl=1256634&ds_rl=1263092"), "https://www.flypgs.com/");
+  assert.equal(
+    clean("https://shop.example.com/p/1?gbraid=a&wbraid=b&ttclid=c&li_fat_id=d&size=m"),
+    "https://shop.example.com/p/1?size=m"
+  );
+});

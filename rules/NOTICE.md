@@ -11,3 +11,5 @@ General Public License v3.0 (`LICENSE-LGPL-3.0.txt`, which supplements `COPYING-
 catalog with any other ClearURLs-format file and rebuild with `npm run build`.
 
 Linkwash is not affiliated with or endorsed by the ClearURLs project.
+
+`linkwash-extra.json` and `EXTRA.md` are Linkwash's own additions (MIT), not part of the ClearURLs catalog. They are merged into the generated files at build time.

@@ -5654,5 +5654,59 @@
     "sub_frame"
    ]
   }
+ },
+ {
+  "id": 233,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_branch_match_id",
+       "_kx",
+       "ds_a_agid",
+       "ds_a_caid",
+       "ds_a_cid",
+       "ds_a_lid",
+       "ds_agid",
+       "ds_cid",
+       "ds_dest_url",
+       "ds_e_ad_type",
+       "ds_e_adid",
+       "ds_e_device",
+       "ds_e_matchtype",
+       "ds_e_network",
+       "ds_e_product_group_id",
+       "ds_e_product_id",
+       "ds_eid",
+       "ds_kid",
+       "ds_kids",
+       "ds_rl",
+       "ds_url_v",
+       "ef_id",
+       "epik",
+       "gbraid",
+       "gclsrc",
+       "igsh",
+       "igshid",
+       "li_fat_id",
+       "rdt_cid",
+       "s_kwcid",
+       "sccid",
+       "ttclid",
+       "wbraid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
  }
 ]

@@ -1,0 +1,22 @@
+{
+  "providers": {
+    "linkwash-ad-click-ids": {
+      "urlPattern": ".*",
+      "rules": [
+        "ds_rl", "ds_kid", "ds_kids", "ds_cid", "ds_eid", "ds_agid", "ds_a_cid", "ds_a_caid", "ds_a_agid", "ds_a_lid",
+        "ds_e_adid", "ds_e_device", "ds_e_matchtype", "ds_e_network", "ds_e_product_id", "ds_e_product_group_id",
+        "ds_e_ad_type", "ds_url_v", "ds_dest_url",
+        "gclsrc", "gbraid", "wbraid",
+        "ttclid",
+        "li_fat_id",
+        "igsh", "igshid",
+        "epik",
+        "rdt_cid",
+        "sccid",
+        "s_kwcid", "ef_id",
+        "_kx",
+        "_branch_match_id"
+      ]
+    }
+  }
+}
