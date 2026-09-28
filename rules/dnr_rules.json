@@ -1,0 +1,5658 @@
+[
+ {
+  "id": 1,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?amazon(?:\\.[a-z]{2,}){1,}\\/gp\\/.*?(?:redirector.html|cart\\/ajax-update.html|video\\/api\\/)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 2,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?amazon(?:\\.[a-z]{2,}){1,}\\/(?:hz\\/reviews-render\\/ajax\\/|message-us\\?|s\\?)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 3,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_encoding",
+       "aaxitk",
+       "ascsubtag",
+       "camp",
+       "colid",
+       "coliid",
+       "content-id",
+       "creative",
+       "creativeASIN",
+       "crid",
+       "dchild",
+       "dib",
+       "dib_tag",
+       "field-lbr_brands_browse-bin",
+       "hsa_cr_id",
+       "keywords",
+       "linkCode",
+       "ms3_c",
+       "qid",
+       "qualifier",
+       "ref",
+       "refRID",
+       "ref_",
+       "rnid",
+       "skipTwisterOG",
+       "smid",
+       "social_share",
+       "spIA",
+       "sprefix",
+       "sr",
+       "srs",
+       "starsLeft",
+       "tag",
+       "th"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?amazon(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 4,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "cvid",
+       "ocid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?msn\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 5,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_encoding",
+       "aaxitk",
+       "ascsubtag",
+       "camp",
+       "colid",
+       "coliid",
+       "creative",
+       "creativeASIN",
+       "crid",
+       "dchild",
+       "field-lbr_brands_browse-bin",
+       "hsa_cr_id",
+       "linkCode",
+       "ms3_c",
+       "qid",
+       "qualifier",
+       "ref",
+       "refRID",
+       "ref_",
+       "rnid",
+       "smid",
+       "spIA",
+       "sprefix",
+       "sr",
+       "srs",
+       "tag",
+       "th"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?amazon(?:\\.[a-z]{2,}){1,}\\/s\\?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 6,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?fls-na\\.amazon(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 7,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/mail\\.google\\.com\\/mail\\/u\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 8,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/accounts\\.google\\.com\\/o\\/oauth2\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 9,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/accounts\\.google\\.com\\/signin\\/oauth\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 10,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:docs|accounts)\\.google(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 11,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/([a-z0-9-\\.])*(chat|drive)\\.google\\.com\\/videoplayback",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 12,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?google(?:\\.[a-z]{2,}){1,}(?:\\/upload)?\\/drive\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 13,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/news\\.google\\.com.*\\?hl=.",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 14,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?google(?:\\.[a-z]{2,}){1,}\\/s\\?tbm=map.*?gs_[a-z]*=.",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 15,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?google(?:\\.[a-z]{2,}){1,}\\/(?:complete\\/search|setprefs|searchbyimage)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 16,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?google(?:\\.[a-z]{2,}){1,}\\/(?:appsactivity|aclk\\?)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 17,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?google(?:\\.[a-z]{2,}){1,}\\/safe[-]?browsing\\/([^&]+)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 18,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_u",
+       "aqs",
+       "atyp",
+       "cad",
+       "cd",
+       "cshid",
+       "dcr",
+       "dpr",
+       "ei",
+       "esrc",
+       "fbs",
+       "i-would-rather-use-firefox",
+       "ictx",
+       "ie",
+       "iflsig",
+       "je",
+       "oq",
+       "pcampaignid",
+       "referrer",
+       "rlz",
+       "sa",
+       "sca_esv",
+       "sca_upv",
+       "sei",
+       "site",
+       "source",
+       "sourceid",
+       "sxsrf",
+       "uact",
+       "usg",
+       "ved",
+       "vet"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?google(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 19,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?googlesyndication\\.com",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 20,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?matrix\\.org\\/_matrix\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 21,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?(?:cloudflare\\.com|prismic\\.io|tangerine\\.ca|gitlab\\.com)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 22,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/myaccount.google(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 23,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/accounts.google(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 24,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?gcsip\\.(?:com|nl)[^?]*\\?.*?&?ref_?=.",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 25,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/[^/]+/[^/]+/[^/]+\\/-\\/refs\\/switch[^?]*\\?.*?&?ref_?=.",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 26,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/bugtracker\\.[^/]*\\/[^?]+\\?.*?&?ref_?=[^/?&]*",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 27,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/comment-cdn\\.9gag\\.com\\/.*?comment-list.json\\?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 28,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?battle\\.net\\/login",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 29,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/blizzard\\.com\\/oauth2",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 30,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/kreditkarten-banking\\.lbb\\.de",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 31,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/www\\.tinkoff\\.ru",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 32,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/www\\.cyberport\\.de\\/adscript\\.php",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 33,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?tweakers\\.net\\/ext\\/lt\\.dsp\\?.*?(?:%3F)?&?ref_?=.",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 34,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/git(lab)?\\.[^/]*\\/[^?]+\\?.*?&?ref_?=[^/?&]*",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 35,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?amazon(?:\\.[a-z]{2,}){1,}\\/message-us\\?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 36,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/authorization\\.td\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 37,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/support\\.steampowered\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 38,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/privacy\\.vakmedianet\\.nl\\/.*?ref=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 39,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/sso\\.serverplan\\.com\\/manage2fa\\/check\\?ref=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 40,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/login\\.meijer\\.com\\/.*?\\?ref=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 41,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?facebook\\.com\\/(?:login_alerts|ajax|should_add_browser)/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 42,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?facebook\\.com\\/groups\\/member_bio\\/bio_dialog\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 43,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/api\\.taiga\\.io",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 44,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?gog\\.com\\/click\\.html",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 45,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/login\\.progressive\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 46,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/www\\.sephora\\.com\\/api\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 47,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/www\\.contestgirl\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 48,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?agenciatributaria\\.gob\\.es",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 49,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/login\\.ingbank\\.pl",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 50,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^wss?:\\/\\/(?:[a-z0-9-]+\\.)*?zoom\\.us",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 51,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/api\\.bilibili\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 52,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?onet\\.pl\\/[^?]*\\?.*?utm_campaign=.",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 53,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?stripe\\.com\\/[^?]+.*?&?referrer=[^/?&]*",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 54,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?lichess\\.org\\/login.*?&?referrer=.*?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 55,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?microsoft\\.com\\/.*?research\\/redirect",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 56,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/like.co\\/api\\/like\\/likebutton\\/[^?]+.*?&?referrer=[^/?&]*",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 57,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/button.like.co\\/in\\/.*?&?referrer=[^/?&]*",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 58,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/www\\.mma\\.go\\.kr",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 59,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?github\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 60,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?billiger\\.de\\/.*?mc=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 61,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?youtrack\\.cloud",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 62,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/cu\\.bankid\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 63,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/login\\.aliexpress\\.us",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 64,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/ieeexplore\\.ieee\\.org",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 65,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?sendgb\\.com\\/upload\\/?.*?utm_source=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 66,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/firebaseappdistribution\\.googleapis\\.com\\/app-binary-downloads\\/projects\\/?.*?utm_source=",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 67,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?irs\\.gov",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 68,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "Echobox",
+       "__hsfp",
+       "__hssc",
+       "__hstc",
+       "__s",
+       "__twitter_impression",
+       "_ga",
+       "_gl",
+       "_hsenc",
+       "_openstat",
+       "action_object_map",
+       "action_ref_map",
+       "action_type_map",
+       "ceneo_spo",
+       "cmpid",
+       "dclid",
+       "fb_action_ids",
+       "fb_action_types",
+       "fb_ref",
+       "fb_source",
+       "fbclid",
+       "ga_campaign",
+       "ga_content",
+       "ga_medium",
+       "ga_place",
+       "ga_source",
+       "ga_term",
+       "gclid",
+       "gs_l",
+       "hmb_campaign",
+       "hmb_medium",
+       "hmb_source",
+       "hsCtaTracking",
+       "itm_campaign",
+       "itm_medium",
+       "itm_source",
+       "mc_cid",
+       "mc_eid",
+       "mc_tc",
+       "mkt_tok",
+       "ml_subscriber",
+       "ml_subscriber_hash",
+       "msclkid",
+       "mtm_campaign",
+       "mtm_cid",
+       "mtm_content",
+       "mtm_group",
+       "mtm_keyword",
+       "mtm_medium",
+       "mtm_placement",
+       "mtm_source",
+       "oly_anon_id",
+       "oly_enc_id",
+       "os_ehash",
+       "otm_campaign",
+       "otm_content",
+       "otm_medium",
+       "otm_source",
+       "rb_clickid",
+       "ref",
+       "ref_",
+       "referrer",
+       "s_cid",
+       "spm",
+       "srsltid",
+       "tracking_source",
+       "twclid",
+       "utm",
+       "utm_brand",
+       "utm_campaign",
+       "utm_cid",
+       "utm_content",
+       "utm_creative_format",
+       "utm_id",
+       "utm_int",
+       "utm_marketing_tactic",
+       "utm_medium",
+       "utm_name",
+       "utm_place",
+       "utm_pubreferrer",
+       "utm_reader",
+       "utm_referrer",
+       "utm_social",
+       "utm_source",
+       "utm_source_platform",
+       "utm_swu",
+       "utm_term",
+       "utm_viz_id",
+       "vero_conv",
+       "vero_id",
+       "wickedid",
+       "wt_mc",
+       "wt_zmc",
+       "wtmc",
+       "wtrid",
+       "wtzmc",
+       "yclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 69,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?adtech(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 70,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?bf-ad(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 71,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?amazon-adsystem(?:\\.[a-z]{2,}){1,}\\/v3\\/oor\\?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 72,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?amazon-adsystem(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 73,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?adsensecustomsearchads(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 74,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?youtube\\.com\\/signin\\?.*?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 75,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "feature",
+       "gclid",
+       "kw",
+       "pp",
+       "si"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?(youtube\\.com|youtu\\.be)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 76,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?youtube\\.com\\/pagead",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 77,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?youtube\\.com\\/api\\/stats\\/ads",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 78,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?facebook\\.com\\/.*?(plugins|ajax)\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 79,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?facebook\\.com\\/dialog\\/(?:share|send)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 80,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?facebook\\.com\\/groups\\/member_bio\\/bio_dialog\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 81,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?facebook\\.com\\/photo\\.php\\?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 82,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?facebook\\.com\\/privacy\\/specific_audience_selector_dialog\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 83,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?facebook\\.com\\/photo\\/download\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 84,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__tn__",
+       "_nc_x",
+       "_rdr",
+       "action_history",
+       "app",
+       "comment_tracking",
+       "dti",
+       "eav",
+       "eid",
+       "ftentidentifier",
+       "idorvanity",
+       "ls_ref",
+       "mibextid",
+       "padding",
+       "pageid",
+       "paipv",
+       "rdc",
+       "rdr",
+       "referral_code",
+       "referral_story_type",
+       "sfnsn",
+       "tracking",
+       "video_source",
+       "wtsid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?facebook\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 85,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/twitter.com\\/i\\/redirect",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 86,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "cn",
+       "ref_url",
+       "s",
+       "t"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?twitter.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 87,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/x.com\\/i\\/redirect",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 88,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "cn",
+       "ref_url",
+       "s",
+       "t"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?x.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 89,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_branch_match_id",
+       "correlation_id",
+       "rdt",
+       "ref_campaign",
+       "ref_source",
+       "share_id"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?reddit.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 90,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "tctx",
+       "trackId"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?netflix.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 91,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "guccounter",
+       "guce_referrer",
+       "guce_referrer_sig",
+       "ncid",
+       "sr",
+       "sr_share"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?techcrunch\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 92,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?bing(?:\\.[a-z]{2,}){1,}\\/WS\\/redirect\\/",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 93,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "cvid",
+       "form",
+       "qp",
+       "qs",
+       "sc",
+       "sk",
+       "sp"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?bing(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 94,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "nb",
+       "u"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?tweakers\\.net",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 95,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "tt_content",
+       "tt_medium"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?twitch\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 96,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "pk_campaign",
+       "pk_kwd"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?vivaldi\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 97,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?indeed\\.com\\/rc\\/clk",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 98,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "alid",
+       "from"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?indeed\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 99,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "exp",
+       "grpos",
+       "plim",
+       "ptl",
+       "stl",
+       "swnt",
+       "t",
+       "vss"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?hh\\.ru",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 100,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_from",
+       "_trkparms",
+       "_trksid",
+       "hash"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?ebay(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 101,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ftag"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?cnet\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 102,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ref_"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?imdb\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 103,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "u1"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?walmart\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 104,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "pl"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?net\\-parade\\.it",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 105,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "xid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?prvnizpravy\\.cz",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 106,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "tpa"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?youku\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 107,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "smid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?nytimes\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 108,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "wbdcd"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?tchibo\\.de",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 109,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "snr"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?steampowered\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 110,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "src"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "https?:\\/\\/([a-z0-9-.]*\\.)shutterstock\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 111,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?mozilla.org\\/api",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 112,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "platform",
+       "redirect_source",
+       "src"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?mozilla\\.org",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 113,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ref"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?readdc\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 114,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "email"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?dailycodingproblem\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 115,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "email_source",
+       "email_token"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?github\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 116,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "af",
+       "aff_request_id",
+       "algo_expid",
+       "algo_pvid",
+       "btsid",
+       "cv",
+       "dp",
+       "gps-id",
+       "mall_affr",
+       "sk",
+       "terminal_id",
+       "ws_ab_test"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?aliexpress(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 117,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "sid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?mozillazine\\.org",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 118,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/comment-cdn\\.9gag\\.com\\/.*?comment-list.json\\?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 119,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ref"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?9gag\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 120,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ref"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?giphy\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 121,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ref",
+       "ref_"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?woot\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 122,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_requestid",
+       "bi",
+       "cid",
+       "di",
+       "dl",
+       "sd"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?vitamix\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 123,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__twitter_impression"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?nypost\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 124,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "partner"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?ozon\\.ru",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 125,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "can_id",
+       "email_referrer",
+       "email_subject",
+       "link_id",
+       "source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?norml\\.org",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 126,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "refId",
+       "trackingId",
+       "trk"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?linkedin\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 127,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "u"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?linkedin\\.com\\/learning",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 128,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "b"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?spiegel\\.de",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 129,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "igsh",
+       "igshid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?instagram\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 130,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "h"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?boredpanda\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 131,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "cuid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?disq\\.us",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 132,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "cm_lm",
+       "cm_mmc",
+       "spJobID",
+       "spMailingID",
+       "spReportId",
+       "spUserID",
+       "webUserId"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?moosejaw\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 133,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "int_campaign"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?80000hours\\.org",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 134,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "si"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?spotify\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 135,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "lr",
+       "redircnt"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?(?:yandex(?:\\.[a-z]{2,}){1,}|ya\\.ru)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 136,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ecp",
+       "m_bt"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?healio\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 137,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "iref"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?zoho\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 138,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "sc_referrer",
+       "sc_ua"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?snapchat\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 139,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?medium\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 140,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?swp\\.de",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 141,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "from"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?wps\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 142,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "entrypoint",
+       "form_type"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:accounts\\.)?firefox\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 143,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "as"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:support\\.)?mozilla\\.org",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 144,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "test"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/kevinroebert\\.gitlab\\.io\\/ClearUrls\\/void\\/index\\.html",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 145,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/kevinroebert\\.gitlab\\.io\\/ClearUrls\\/void\\/block\\.svg",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 146,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "test"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/test\\.clearurls\\.xyz\\/void\\/index\\.html",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 147,
+  "priority": 2,
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/test\\.clearurls\\.xyz\\/void\\/block\\.svg",
+   "resourceTypes": [
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 148,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "from",
+       "xt_at",
+       "xtor"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?diepresse\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 149,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "x"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/newsletter\\.lidl(?:\\.[a-z]{2,}){1,}",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 150,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "reco_id",
+       "sid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?allegro\\.pl",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 151,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "CMP_ID",
+       "CMP_SKU",
+       "INT_ID",
+       "MER",
+       "fl",
+       "iv_",
+       "k_clickid",
+       "rmatt",
+       "ti"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?backcountry\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 152,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_xtd",
+       "rv"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?meetup\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 153,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "app"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?apple\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 154,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "bxid",
+       "cndid",
+       "esrc",
+       "mbid",
+       "source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?newyorker\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 155,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "link_id",
+       "track_click"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?gog\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 156,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "CMP"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?theguardian\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 157,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_u",
+       "abbucket",
+       "abtest",
+       "acm",
+       "algo_expid",
+       "algo_pvid",
+       "ali_refid",
+       "ali_trackid",
+       "app",
+       "bftRwd",
+       "bftTag",
+       "cpp",
+       "impid",
+       "lygClk",
+       "mytmenu",
+       "ns",
+       "pos",
+       "price",
+       "pvid",
+       "scene",
+       "share_crt_v",
+       "shareurl",
+       "short_name",
+       "sourceType",
+       "sp_tk",
+       "spm",
+       "suid",
+       "trackInfo",
+       "turing_bucket",
+       "un",
+       "ut_sk",
+       "utkn",
+       "utparam"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?taobao\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 158,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "abbucket",
+       "abtest",
+       "acm",
+       "activity_id",
+       "algo_expid",
+       "algo_pvid",
+       "ali_refid",
+       "ali_trackid",
+       "app",
+       "bftRwd",
+       "bftTag",
+       "cpp",
+       "impid",
+       "lygClk",
+       "mytmenu",
+       "ns",
+       "pos",
+       "price",
+       "pvid",
+       "scene",
+       "share_crt_v",
+       "shareurl",
+       "short_name",
+       "sourceType",
+       "sp_tk",
+       "suid",
+       "trackInfo",
+       "turing_bucket",
+       "un",
+       "user_number_id",
+       "ut_sk",
+       "utkn",
+       "utparam"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?tmall\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 159,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "sm"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?tb\\.cn",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 160,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/api\\.bilibili\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 161,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/space\\.bilibili\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 162,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "buvid",
+       "callback",
+       "from",
+       "from_source",
+       "is_story_h5",
+       "mid",
+       "msource",
+       "plat_id",
+       "refer_from",
+       "seid",
+       "share_from",
+       "share_medium",
+       "share_plat",
+       "share_session_id",
+       "share_source",
+       "share_tag",
+       "spm_id_from",
+       "timestamp",
+       "unique_k",
+       "up_id",
+       "vd_source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?bilibili\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 163,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "spm_id_from"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/space\\.bilibili\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 164,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "bbid",
+       "ts"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/m\\.bilibili\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 165,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "broadcast_type",
+       "is_room_feed",
+       "session_id",
+       "visit_id"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/live\\.bilibili\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 166,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?marketscreener\\.com\\/search\\/\\?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 167,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "RewriteLast",
+       "aComposeInputSearch",
+       "add_mots",
+       "countview",
+       "lien",
+       "mots",
+       "noredirect",
+       "type_recherche",
+       "type_recherche_forum"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?marketscreener\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 168,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "RewriteLast",
+       "aComposeInputSearch",
+       "countview",
+       "lien",
+       "noredirect",
+       "type_recherche",
+       "type_recherche_forum"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?marketscreener\\.com\\/search\\/\\?",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 169,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "acampID",
+       "intl",
+       "irclickid",
+       "irgwc",
+       "loc",
+       "mpid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?bestbuy\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 170,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_d",
+       "_r",
+       "_t",
+       "preview_pb",
+       "share_app_name",
+       "share_iid",
+       "source",
+       "timestamp",
+       "u_code",
+       "user_id"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?tiktok\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 171,
+  "priority": 3,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/web\\/v1\\/user\\/hover_card",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame",
+    "script",
+    "image",
+    "xmlhttprequest",
+    "ping",
+    "media",
+    "other"
+   ]
+  }
+ },
+ {
+  "id": 172,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "app_platform",
+       "app_version",
+       "apptime",
+       "appuid",
+       "author_share",
+       "exSource",
+       "ignoreEngage",
+       "shareRedId",
+       "share_from_user_hidden",
+       "share_id",
+       "type",
+       "verifyBiz",
+       "verifyType",
+       "verifyUuid",
+       "xhsshare",
+       "xsec_source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?xiaohongshu\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 173,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "dr_tracker",
+       "hash",
+       "idprob",
+       "sending_id",
+       "site_id"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?autoplus\\.fr",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 174,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "npc",
+       "npi",
+       "pc"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?bigfishgames\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 175,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "partner"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?humblebundle\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 176,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "actCampaignType",
+       "actId",
+       "actSource"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?cafepedagogique\\.net",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 177,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "rtoken"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?zillow\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 178,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "MID",
+       "RID",
+       "ex",
+       "identityID"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?realtor\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 179,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "riftinfo"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?redfin\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 180,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "epic_affiliate",
+       "epic_gameId"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?epicgames\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 181,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "srcc",
+       "utm_medium",
+       "utm_source",
+       "utm_v"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?onet\\.pl",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 182,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "clickId",
+       "internalSource",
+       "referringContentType",
+       "referringId"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?allrecipes\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 183,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "xtor"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?europe1\\.fr",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 184,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "clickOrigin",
+       "istBid",
+       "istCompanyId",
+       "istFeedId",
+       "istItemId"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?argos\\.co\\.uk",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 185,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "src"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?thunderbird\\.net",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 186,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "__source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?cnbc\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 187,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "refPageId"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?roblox\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 188,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_returnURL"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?cell\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 189,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "redirectedFrom"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/academic\\.oup\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 190,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?agata88\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 191,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "share"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?hs\\.fi",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 192,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "origin"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?yle\\.fi",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 193,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "collection-tab-name",
+       "ctx",
+       "fm",
+       "hpid",
+       "marketplace",
+       "nnc",
+       "otracker",
+       "otracker.",
+       "ppn",
+       "ppt",
+       "qH",
+       "srno",
+       "ssid",
+       "st",
+       "store"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?flipkart\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 194,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "cancelUrl",
+       "disc",
+       "lcb",
+       "leadOutUrl",
+       "offerListId",
+       "osId",
+       "sid",
+       "siteId",
+       "src"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?idealo\\.de",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 195,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "internal"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?teletrader\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 196,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_hsenc",
+       "_hsmi",
+       "ecid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?deeplearning\\.ai",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 197,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "PostType",
+       "ServiceType",
+       "TheTime",
+       "UniqueID",
+       "ftag"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?gamespot\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 198,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "src",
+       "trkid",
+       "whid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?tokopedia\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 199,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ddw",
+       "ds_ch"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?wkorea\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 200,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "content",
+       "medium",
+       "source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?eonline\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 201,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "taid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?reuters\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 202,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "psf_variant",
+       "share_intent",
+       "source_location"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?change\\.org",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 203,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "tag"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?ceneo\\.pl",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 204,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "intcid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?wired\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 205,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_v",
+       "api",
+       "begin",
+       "behavior",
+       "c2",
+       "c3",
+       "code",
+       "ct",
+       "dl",
+       "enableLinkTrace",
+       "enableSPA",
+       "environment",
+       "flag",
+       "msg",
+       "page",
+       "pid",
+       "post_res",
+       "pv_id",
+       "release",
+       "sample",
+       "sampling",
+       "sr",
+       "success",
+       "tag",
+       "traceId",
+       "uid",
+       "vp"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/arms-retcode\\.aliyuncs\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 206,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "adid",
+       "i_cid",
+       "n_cid",
+       "waad"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?://(?:[a-z0-9-]+\\.)*?nikkei\\.co(?:m|\\.jp)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 207,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "dt_dapp",
+       "weibo_id"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?weibo\\.(cn|com)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 208,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "context_referrer",
+       "funnel",
+       "ref_ctx_id",
+       "source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?fiverr\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 209,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "click_key",
+       "click_sum",
+       "organic_search_click"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?etsy\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 210,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "itm_campaign",
+       "itm_medium",
+       "itm_source",
+       "itm_term"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?magento\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 211,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "dop_ab_variant",
+       "dop_id",
+       "dop_req_id",
+       "dop_source_zone_name",
+       "seq_no",
+       "source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?novinky\\.cz",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 212,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "dop_ab_variant",
+       "dop_id",
+       "dop_req_id",
+       "dop_source_zone_name"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?aktualne\\.cz",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 213,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "dop_ab_variant",
+       "dop_id",
+       "dop_req_id",
+       "dop_source_zone_name",
+       "seq_no",
+       "source"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?seznamzpravy\\.cz",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 214,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "log",
+       "p"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?billiger\\.de",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 215,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "dop_ab_variant",
+       "dop_id",
+       "dop_req_id",
+       "dop_source_zone_name",
+       "sznclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?respekt\\.cz",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 216,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "dop_ab_variant",
+       "dop_id",
+       "dop_req_id",
+       "dop_source_zone_name",
+       "sznclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?faei\\.cz",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 217,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "dop_ab_variant",
+       "dop_id",
+       "dop_req_id",
+       "dop_source_zone_name",
+       "sznclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?iprima\\.cz",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 218,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "dop_ab_variant",
+       "dop_id",
+       "dop_req_id",
+       "dop_source_zone_name",
+       "sznclid"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?nova\\.cz",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 219,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "DEAL_ID",
+       "L",
+       "S",
+       "T",
+       "V",
+       "ad_click_id",
+       "pdp_filters",
+       "position",
+       "search_layout",
+       "tracking_id",
+       "type"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?mercadoli[bv]re\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 220,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "funnelUUID"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?quizlet\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 221,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "xtor"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?bbc\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 222,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "federated_search_id",
+       "search_type",
+       "source",
+       "source_impression_id"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?airbnb\\.(com|ae|ca|co\\.in|co\\.nz|co\\.uk|co\\.za|com\\.au|com\\.mt|com\\.sg|de|gy|ie)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 223,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "refer_method"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?://(?:[a-z0-9-]+\\.)*?kahoot\\.it",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 224,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ac",
+       "from_search",
+       "from_srp",
+       "qid",
+       "rank"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?goodreads\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 225,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "pvid",
+       "scm"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?sohu\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 226,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "publish_id",
+       "sp_atk",
+       "xptdk"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?shopee\\.(com|co\\.th|tw)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 227,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "abid",
+       "ad_src",
+       "cid",
+       "clickTrackInfo",
+       "did",
+       "from",
+       "impsrc",
+       "mp",
+       "pa",
+       "pid_pvid",
+       "pos",
+       "pvid",
+       "scm",
+       "spm",
+       "src"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?lazada\\.(com|co\\.th|co\\.id|com\\.my|com\\.ph|sg|vn)",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 228,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "campaign",
+       "sPartner"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?office-partner\\.de",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 229,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "shareToken"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?thetimes\\.co\\.uk",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 230,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "ito"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?metro\\.co\\.uk",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 231,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "sh"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?forbes\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ },
+ {
+  "id": 232,
+  "priority": 1,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "transform": {
+     "queryTransform": {
+      "removeParams": [
+       "_sc",
+       "_sid",
+       "_ss"
+      ]
+     }
+    }
+   }
+  },
+  "condition": {
+   "regexFilter": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?nordwolle\\.com",
+   "resourceTypes": [
+    "main_frame",
+    "sub_frame"
+   ]
+  }
+ }
+]

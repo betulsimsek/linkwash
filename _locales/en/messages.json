@@ -1,0 +1,77 @@
+{
+  "extName": {
+    "message": "Linkwash"
+  },
+  "extDescription": {
+    "message": "Removes tracking parameters and unwraps redirect links before you click. ClearURLs rules, Manifest V3, no data collection."
+  },
+  "tagline": {
+    "message": "Clean links, no tracking"
+  },
+  "toggleAll": {
+    "message": "Turn Linkwash on or off"
+  },
+  "thisSite": {
+    "message": "This site"
+  },
+  "pauseSite": {
+    "message": "Clean links on this site"
+  },
+  "noSite": {
+    "message": "Not a web page"
+  },
+  "statusOn": {
+    "message": "Links to this site are cleaned."
+  },
+  "statusPaused": {
+    "message": "Paused: links to this site are left as they are."
+  },
+  "statusOff": {
+    "message": "Linkwash is turned off."
+  },
+  "currentUrl": {
+    "message": "This page, cleaned"
+  },
+  "removedN": {
+    "message": "$COUNT$ tracking parameter(s) removed.",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "unwrapped": {
+    "message": "Redirect unwrapped to the real destination."
+  },
+  "alreadyClean": {
+    "message": "Nothing to remove, this URL is already clean."
+  },
+  "copyClean": {
+    "message": "Copy clean link"
+  },
+  "copied": {
+    "message": "Copied"
+  },
+  "openClean": {
+    "message": "Reload clean"
+  },
+  "privacyLine": {
+    "message": "Runs fully on your device. No network requests, no analytics."
+  },
+  "rulesLine": {
+    "message": "Rules: ClearURLs catalog, $N$ providers",
+    "placeholders": {
+      "N": {
+        "content": "$1",
+        "example": "206"
+      }
+    }
+  },
+  "menuCopyCleanLink": {
+    "message": "Copy clean link"
+  },
+  "menuCopyCleanPage": {
+    "message": "Copy clean link to this page"
+  }
+}

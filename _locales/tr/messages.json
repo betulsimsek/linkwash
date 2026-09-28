@@ -1,0 +1,77 @@
+{
+  "extName": {
+    "message": "Linkwash"
+  },
+  "extDescription": {
+    "message": "Takip parametrelerini siler, yönlendirme linklerini tıklamadan önce çözer. ClearURLs kuralları, Manifest V3, veri toplamaz."
+  },
+  "tagline": {
+    "message": "Temiz link, takip yok"
+  },
+  "toggleAll": {
+    "message": "Linkwash'ı aç/kapat"
+  },
+  "thisSite": {
+    "message": "Bu site"
+  },
+  "pauseSite": {
+    "message": "Bu sitede linkleri temizle"
+  },
+  "noSite": {
+    "message": "Web sayfası değil"
+  },
+  "statusOn": {
+    "message": "Bu siteye giden linkler temizleniyor."
+  },
+  "statusPaused": {
+    "message": "Duraklatıldı: bu siteye giden linklere dokunulmuyor."
+  },
+  "statusOff": {
+    "message": "Linkwash kapalı."
+  },
+  "currentUrl": {
+    "message": "Bu sayfanın temiz hali"
+  },
+  "removedN": {
+    "message": "$COUNT$ takip parametresi silindi.",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "unwrapped": {
+    "message": "Yönlendirme çözüldü, asıl adrese gidiliyor."
+  },
+  "alreadyClean": {
+    "message": "Silinecek bir şey yok, bu adres zaten temiz."
+  },
+  "copyClean": {
+    "message": "Temiz linki kopyala"
+  },
+  "copied": {
+    "message": "Kopyalandı"
+  },
+  "openClean": {
+    "message": "Temiz haliyle aç"
+  },
+  "privacyLine": {
+    "message": "Tamamen cihazında çalışır. Ağ isteği yok, analitik yok."
+  },
+  "rulesLine": {
+    "message": "Kurallar: ClearURLs kataloğu, $N$ sağlayıcı",
+    "placeholders": {
+      "N": {
+        "content": "$1",
+        "example": "206"
+      }
+    }
+  },
+  "menuCopyCleanLink": {
+    "message": "Temiz linki kopyala"
+  },
+  "menuCopyCleanPage": {
+    "message": "Bu sayfanın temiz linkini kopyala"
+  }
+}

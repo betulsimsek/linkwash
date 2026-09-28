@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main id="app">
+    <header class="head">
+      <img src="../icons/icon48.png" alt="" width="28" height="28">
+      <div class="title">
+        <strong data-i18n="extName"></strong>
+        <span class="muted" data-i18n="tagline"></span>
+      </div>
+      <label class="switch" data-i18n-title="toggleAll">
+        <input type="checkbox" id="enabled">
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <section class="card" id="site-card">
+      <div class="row">
+        <div>
+          <div class="label" data-i18n="thisSite"></div>
+          <div class="host" id="host">—</div>
+        </div>
+        <label class="switch small" data-i18n-title="pauseSite">
+          <input type="checkbox" id="site-on">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <p class="muted status" id="site-status"></p>
+    </section>
+
+    <section class="card">
+      <div class="label" data-i18n="currentUrl"></div>
+      <div class="url" id="clean-url">—</div>
+      <p class="muted" id="removed-info"></p>
+      <div class="actions">
+        <button class="btn-primary" id="copy" data-i18n="copyClean"></button>
+        <button id="reload" data-i18n="openClean"></button>
+      </div>
+    </section>
+
+    <footer class="muted foot">
+      <span data-i18n="privacyLine"></span><br>
+      <span id="rules-line"></span>
+    </footer>
+  </main>
+  <script src="../rules/providers.js"></script>
+  <script src="engine.js"></script>
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
