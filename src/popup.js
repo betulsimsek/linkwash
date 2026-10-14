@@ -75,6 +75,6 @@ $("reload").addEventListener("click", async () => {
   ]);
   settings = s;
   tab = tabs[0] || null;
-  if (info) $("rules-line").textContent = t("rulesLine", [String(info.providers)]);
+  if (info) $("rules-line").textContent = t("rulesLine", [String(info.catalogProviders ?? info.providers)]);
   render();
 })();

@@ -175,6 +175,7 @@ async function main() {
   for (const name of Object.keys(extra.providers)) {
     if (catalog.providers[name]) throw new Error(`extra provider ${name} clashes with the catalog`);
   }
+  const catalogProviders = Object.keys(catalog.providers).length;
   catalog.providers = { ...catalog.providers, ...extra.providers };
   const { providers, dnr, stats } = buildFromCatalog(catalog);
 
@@ -190,7 +191,7 @@ async function main() {
     "// Rules: https://github.com/ClearURLs/Rules (LGPL-3.0). Do not edit by hand.\n";
   writeFileSync(join(ROOT, "rules", "providers.js"), header + "globalThis.LINKWASH_PROVIDERS = " + JSON.stringify(providers) + ";\n");
   writeFileSync(join(ROOT, "rules", "dnr_rules.json"), JSON.stringify(dnr, null, 1) + "\n");
-  writeFileSync(join(ROOT, "rules", "build-info.json"), JSON.stringify({ catalogSha256: hash, dnrRules: dnr.length, ...stats }, null, 2) + "\n");
+  writeFileSync(join(ROOT, "rules", "build-info.json"), JSON.stringify({ catalogSha256: hash, dnrRules: dnr.length, catalogProviders, ...stats }, null, 2) + "\n");
   console.log(`providers=${stats.providers} dnrRules=${dnr.length} literal=${stats.literalParams} regex=${stats.regexParams} redirections=${stats.redirections} blocked=${stats.blockedDomains}`);
 }
 

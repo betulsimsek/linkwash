@@ -60,7 +60,7 @@
     "message": "Runs fully on your device. No network requests, no analytics."
   },
   "rulesLine": {
-    "message": "Rules: ClearURLs catalog, $N$ providers",
+    "message": "Rules: ClearURLs catalog ($N$ providers) + Linkwash extras",
     "placeholders": {
       "N": {
         "content": "$1",

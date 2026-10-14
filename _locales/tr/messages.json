@@ -60,7 +60,7 @@
     "message": "Tamamen cihazında çalışır. Ağ isteği yok, analitik yok."
   },
   "rulesLine": {
-    "message": "Kurallar: ClearURLs kataloğu, $N$ sağlayıcı",
+    "message": "Kurallar: ClearURLs kataloğu ($N$ sağlayıcı) + Linkwash ek kuralları",
     "placeholders": {
       "N": {
         "content": "$1",
