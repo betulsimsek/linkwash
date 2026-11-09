@@ -1,11 +1,11 @@
 {
-  "catalogSha256": "df97eb5c1aeeb9f96d0c28a6a60604f3cb2b1f9e7776eee228258e1b2bae1424",
-  "dnrRules": 233,
+  "catalogSha256": "ccc0b05a867d1ff577db3af8b6ad3f2889d259282a47dd99b3fa3db41a3c4c7d",
+  "dnrRules": 234,
   "catalogProviders": 206,
   "providers": 207,
   "literalParams": 718,
   "regexParams": 57,
-  "redirections": 64,
+  "redirections": 65,
   "blockedDomains": 10,
-  "exceptions": 79
+  "exceptions": 80
 }

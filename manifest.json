@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extName__",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "__MSG_extDescription__",
   "default_locale": "en",
   "minimum_chrome_version": "120",
@@ -19,15 +19,26 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["rules/providers.js", "src/engine.js", "src/content.js"],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "rules/providers.js",
+        "src/engine.js",
+        "src/content.js"
+      ],
       "run_at": "document_start",
       "all_frames": true
     }
   ],
   "declarative_net_request": {
     "rule_resources": [
-      { "id": "clearurls", "enabled": true, "path": "rules/dnr_rules.json" }
+      {
+        "id": "clearurls",
+        "enabled": true,
+        "path": "rules/dnr_rules.json"
+      }
     ]
   },
   "permissions": [
@@ -37,7 +48,9 @@
     "contextMenus",
     "clipboardWrite"
   ],
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },

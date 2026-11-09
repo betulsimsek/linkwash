@@ -1,6 +1,6 @@
 {
   "name": "linkwash",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "Manifest V3 successor to ClearURLs: removes tracking parameters and unwraps redirect links.",
   "type": "module",
